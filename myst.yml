@@ -1,0 +1,68 @@
+version: 1
+project:
+  title: Kaushik Muduchuru 
+  description: Personal website of Kaushik Muduchuru, Research Scientist at ZALF, working on GeoAI, machine learning, and crop yield forecasting using Earth observation data.
+  # thumbnail: images/profile-thumbnail.webp
+  # authors:
+  #   - name: Kaushik Muduchuru
+  #     email: kaushik.reddy.m@gmail.com
+  #     orcid: 0000-0000-0000-0000
+  #     url: 
+  #     affiliations:
+  #       - Leibniz Centre for Agricultural Landscape Research (ZALF)
+  contributors: []
+  copyright: '2026'
+  keywords:
+    - Climate Change
+    - Machine Learning
+    - Deep Learning
+    - Agriculture
+    - Aerosol & Air Quality 
+  # github: username/repo
+  exclude:
+    - _build
+    - Thumbs.db
+    - .DS_Store
+    - '**.ipynb_checkpoints'
+    - cv.typ
+    - cv.pdf
+    - generate_cv.py
+    - generate_rss.py
+    - inject_comments.py
+    - rss.xml
+    - atom.xml
+    - fonts/**
+    - CONDUCT.md
+    - CONTRIBUTING.md
+    - README.md
+  toc:
+    - file: index.md
+    - file: pages/about.md
+    - file: pages/research.md
+    - file: pages/software.md
+    - file: pages/teaching.md
+    - file: pages/talks.md
+    - file: pages/awards.md
+    - file: pages/services.md
+    - file: pages/contact.md
+    # - file: pages/news.md
+    # - file: pages/blog.md
+    # - pattern: blog/*.md
+    #   hidden: true
+site:
+  options:
+    logo: logo.png
+    logo_dark: logo.png
+    favicon: fav.ico
+    style: custom.css
+    # analytics_google: G-XXXXXXXXXX
+    folders: true
+  template: book-theme
+  parts:
+    primary_sidebar_footer: ''
+    footer: |
+      [CV (PDF)](cv.pdf) |
+      [GitHub](https://github.com/Kaushikreddym) |
+      [LinkedIn](https://www.linkedin.com/in/kaushik-muduchuru-ab911077/) |
+      [Google Scholar](https://scholar.google.com/citations?user=MrB8A3gAAAAJ&hl=en) |
+      [ORCID](https://orcid.org/0000-0002-8967-7872)

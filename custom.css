@@ -1,0 +1,742 @@
+/* ============================================================
+   FORCE LIGHT THEME
+   Hide the toggle and keep structural backgrounds always light
+   ============================================================ */
+
+/* Hide the dark/light mode toggle button */
+button[aria-label="Toggle theme between light and dark mode"],
+button[title="Toggle theme between light and dark mode"] {
+  display: none !important;
+}
+
+/* Base page surfaces — always light, even if the `dark` class is present
+   (e.g. visitor's OS is set to dark mode). */
+html.dark body {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+html.dark .myst-top-nav {
+  background: rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* ------------------------------------------------------------
+   Neutralise every neutral/light-text Tailwind dark: utility so
+   text and surfaces stay readable when the html.dark class is
+   active (covers React-rendered parts like the right contents
+   bar too). Accent colours (blue/green/red/purple) are left
+   untouched so highlights survive. These win because Tailwind's
+   utilities carry no !important.
+   ------------------------------------------------------------ */
+
+/* Text → dark-on-light (light-text utilities only) */
+html.dark .dark\:text-white,
+html.dark .dark\:text-slate-50,
+html.dark .dark\:text-gray-100,
+html.dark .dark\:text-slate-100,
+html.dark .dark\:text-stone-100   { color: #0f172a !important; }
+html.dark .dark\:text-gray-200,
+html.dark .dark\:text-stone-200,
+html.dark .dark\:text-neutral-200 { color: #1f2937 !important; }
+html.dark .dark\:text-gray-300,
+html.dark .dark\:text-slate-300,
+html.dark .dark\:text-stone-300   { color: #334155 !important; }
+html.dark .dark\:text-gray-400,
+html.dark .dark\:text-slate-400,
+html.dark .dark\:text-zinc-400    { color: #475569 !important; }
+html.dark .dark\:text-gray-600,
+html.dark .dark\:text-stone-700   { color: #475569 !important; }
+html.dark .dark\:text-blue-50,
+html.dark .dark\:text-blue-200    { color: #1d4ed8 !important; }
+
+/* Backgrounds → light surfaces (neutral darks only) */
+html.dark .dark\:bg-stone-900,
+html.dark .dark\:bg-slate-900,
+html.dark .dark\:bg-slate-950     { background-color: #ffffff !important; }
+html.dark .dark\:bg-stone-900\/95 { background-color: rgba(255, 255, 255, 0.96) !important; }
+html.dark .dark\:bg-stone-900\/80,
+html.dark .dark\:bg-neutral-800\/80 { background-color: rgba(255, 255, 255, 0.85) !important; }
+html.dark .dark\:bg-stone-800,
+html.dark .dark\:bg-slate-800,
+html.dark .dark\:bg-gray-700      { background-color: #f8fafc !important; }
+html.dark .dark\:bg-slate-800\/50 { background-color: rgba(248, 250, 252, 0.6) !important; }
+html.dark .dark\:bg-stone-700,
+html.dark .dark\:bg-slate-500,
+html.dark .dark\:bg-slate-600     { background-color: #eef2f7 !important; }
+
+/* Borders → light borders (neutral darks only) */
+html.dark .dark\:border-gray-500,
+html.dark .dark\:border-gray-500\/60,
+html.dark .dark\:border-slate-300 { border-color: #d1d5db !important; }
+html.dark .dark\:border-gray-600,
+html.dark .dark\:border-gray-800,
+html.dark .dark\:border-slate-600,
+html.dark .dark\:border-white,
+html.dark .dark\:border-b-white   { border-color: #e5e7eb !important; }
+html.dark .dark\:border-l-gray-50 { border-color: #f9fafb !important; }
+
+/* Shadows → soft light shadows */
+html.dark .dark\:shadow-neutral-700,
+html.dark .dark\:shadow-neutral-800,
+html.dark .dark\:shadow-stone-700 { --tw-shadow-color: rgba(0, 0, 0, 0.08) !important; }
+
+/* Article body text — force dark in dark mode. Plain prose paragraphs,
+   lists and headings carry no colour class and only inherit from <body>,
+   so this guarantees they stay readable. Links keep their own accent
+   colour via the `.article a` rule further down. */
+html.dark .article,
+html.dark .article p,
+html.dark .article li,
+html.dark .article dd,
+html.dark .article dt,
+html.dark .article blockquote,
+html.dark .article figcaption,
+html.dark .article h1,
+html.dark .article h2,
+html.dark .article h3,
+html.dark .article h4,
+html.dark .article h5,
+html.dark .article h6,
+html.dark .article strong,
+html.dark .article em,
+html.dark .article th,
+html.dark .article td {
+  color: #0f172a !important;
+}
+
+/* ============================================================
+   Hide MyST download dropdown (existing rule)
+   ============================================================ */
+.myst-fm-downloads-dropdown {
+  display: none !important;
+}
+
+/* ============================================================
+   Table cell wrapping (existing rule)
+   ============================================================ */
+table td:first-child,
+table th:first-child {
+  white-space: nowrap;
+}
+
+/* ============================================================
+   Giscus comments widget (existing rules)
+   ============================================================ */
+#giscus-comments {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+.giscus,
+.giscus-frame {
+  width: 100% !important;
+}
+
+/* ============================================================
+   Featured projects + sponsors grid — centered card layout
+   (existing rules)
+   ============================================================ */
+#featured-projects + .myst-grid .myst-card-footer,
+#featured-projects + .myst-grid .myst-card-title,
+.sponsors-grid .myst-card-footer,
+.sponsors-grid .myst-card-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  text-align: center !important;
+  white-space: nowrap;
+}
+#featured-projects + .myst-grid .myst-card-footer {
+  flex-direction: column;
+  white-space: normal;
+}
+#featured-projects + .myst-grid .myst-card-footer img {
+  height: 20px;
+  vertical-align: middle;
+  margin: 2px 2px 0 2px;
+}
+#featured-projects + .myst-grid .myst-card-footer > *,
+#featured-projects + .myst-grid .myst-card-title > *,
+.sponsors-grid .myst-card-footer > *,
+.sponsors-grid .myst-card-title > * {
+  text-align: center !important;
+}
+#featured-projects + .myst-grid .myst-card-footer p,
+#featured-projects + .myst-grid .myst-card-footer strong,
+.sponsors-grid .myst-card-footer p,
+.sponsors-grid .myst-card-footer strong {
+  margin: 0 auto;
+}
+.sponsors-grid .myst-card-body,
+#featured-projects + .myst-grid .myst-card-body {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sponsors-grid .myst-card-body img,
+#featured-projects + .myst-grid .myst-card-body img {
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* ============================================================
+   Blog posts grid — image border (existing rules)
+   ============================================================ */
+#posts ~ .myst-grid .myst-card-header,
+#posts ~ * .myst-grid .myst-card-header {
+  padding: 0.5rem !important;
+  border-bottom: none !important;
+  background: transparent !important;
+}
+#posts ~ .myst-grid .myst-card-header img,
+#posts ~ * .myst-grid .myst-card-header img {
+  display: block;
+  width: 100%;
+  margin: 0 !important;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 4px;
+}
+
+/* ============================================================
+   STYLE INHERITED FROM reference/index.html
+   Inter font · Glassmorphism · Blue/Cyan palette · Animations
+   ============================================================ */
+
+/* --- 1. Font ------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+body,
+.article {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif !important;
+}
+
+/* --- 2. Custom Scrollbar ------------------------------------ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.5);
+  border-radius: 20px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background-color: rgba(71, 85, 105, 0.5);
+}
+
+/* --- 3. Page Fade-in --------------------------------------- */
+@keyframes myst-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.article {
+  animation: myst-fade-in 0.4s ease-out;
+}
+
+/* --- 4. Subtle Background Accent (light + dark) ------------ */
+/* Applies a barely-visible radial glow behind content —
+   same visual language as the neural-network background in
+   reference/index.html, expressed purely in CSS. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 15% 60%, rgba(37, 99, 235, 0.04) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 30%, rgba(6, 182, 212, 0.04) 0%, transparent 55%);
+}
+
+/* --- 5. Navigation Bar ------------------------------------- */
+.myst-top-nav {
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* --- 6. Card Glassmorphism --------------------------------- */
+.myst-card {
+  background-color: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border-color: rgba(255, 255, 255, 0.45) !important;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.08) !important;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease !important;
+}
+
+/* Card hover — blue accent in light, cyan in dark */
+.myst-card:hover {
+  border-color: rgba(37, 99, 235, 0.55) !important;
+  box-shadow: 0 8px 24px -4px rgba(37, 99, 235, 0.14) !important;
+  transform: translateY(-2px);
+}
+
+/* Suppress underline on card text/links — covers the anchor card itself,
+   nested anchors, titles, and any descendant in default + hover states */
+a.myst-card,
+a.myst-card:hover,
+a.myst-card:focus,
+.myst-card,
+.myst-card:hover,
+.myst-card *,
+.myst-card *:hover,
+.myst-card a,
+.myst-card a:hover,
+.myst-card .myst-card-title,
+.myst-card:hover .myst-card-title {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  text-underline-offset: 0 !important;
+  background-image: none !important;
+}
+
+/* Card header / footer */
+.myst-card-header {
+  background-color: rgba(248, 250, 252, 0.7) !important;
+  border-bottom-color: rgba(0, 0, 0, 0.06) !important;
+}
+.myst-card-footer {
+  background-color: rgba(248, 250, 252, 0.7) !important;
+  border-top-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Card title accent */
+.myst-card-title {
+  color: #1d4ed8 !important; /* blue-700 */
+}
+
+/* --- 7. Section Heading Underline Accent ------------------- */
+/* Mirrors the coloured underline bar used in SectionHeading
+   component from reference/index.html */
+.article h2 {
+  position: relative;
+  padding-bottom: 0.85rem;
+}
+.article h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3.5rem;
+  height: 4px;
+  background: #2563eb; /* blue-600 */
+  border-radius: 9999px;
+}
+
+/* --- 8. Link Colours --------------------------------------- */
+.article a:not([class*="myst-"]):not([class*="btn"]) {
+  color: #2563eb !important;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+.article a:not([class*="myst-"]):not([class*="btn"]):hover {
+  color: #1d4ed8 !important;
+  opacity: 0.85;
+}
+
+/* --- 9. Table Enhancement ---------------------------------- */
+.article table tr:hover td {
+  background-color: rgba(219, 234, 254, 0.25) !important;
+}
+
+/* --- 10. Dropdown / Collapsible header -------------------- */
+.myst-dropdown-header-title {
+  font-weight: 600;
+}
+
+/* --- 11. Sidebar Nav — colour-coded tabs ------------------- */
+
+/* Per-page accent colour + background tint */
+a.myst-toc-item[href="/"]           { --nc: #2563eb; --nb: rgba(37,99,235,0.08);   }
+a.myst-toc-item[href*="about"]      { --nc: #7c3aed; --nb: rgba(124,58,237,0.08);  }
+a.myst-toc-item[href*="research"]   { --nc: #0891b2; --nb: rgba(8,145,178,0.08);   }
+a.myst-toc-item[href*="software"]   { --nc: #059669; --nb: rgba(5,150,105,0.08);   }
+a.myst-toc-item[href*="teaching"]   { --nc: #d97706; --nb: rgba(217,119,6,0.08);   }
+a.myst-toc-item[href*="talks"]      { --nc: #db2777; --nb: rgba(219,39,119,0.08);  }
+a.myst-toc-item[href*="awards"]     { --nc: #9333ea; --nb: rgba(147,51,234,0.08);  }
+a.myst-toc-item[href*="services"]   { --nc: #0284c7; --nb: rgba(2,132,199,0.08);   }
+a.myst-toc-item[href*="contact"]    { --nc: #16a34a; --nb: rgba(22,163,74,0.08);   }
+a.myst-toc-item[href*="news"]       { --nc: #ea580c; --nb: rgba(234,88,12,0.08);   }
+a.myst-toc-item[href*="blog"]       { --nc: #6366f1; --nb: rgba(99,102,241,0.08);  }
+
+/* Base: left border placeholder so width never shifts */
+a.myst-toc-item {
+  border-left: 3px solid transparent !important;
+  border-radius: 0 0.5rem 0.5rem 0 !important;
+  padding-left: 0.75rem !important;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease !important;
+}
+
+/* Coloured dot before each label */
+a.myst-toc-item::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background: var(--nc, #94a3b8) !important;
+  margin-right: 0.55rem !important;
+  vertical-align: middle !important;
+  opacity: 0.35 !important;
+  transition: opacity 0.18s ease, transform 0.18s ease !important;
+}
+
+/* Hover state */
+a.myst-toc-item:hover {
+  background: var(--nb, rgba(37,99,235,0.06)) !important;
+  border-left-color: var(--nc, #2563eb) !important;
+  color: var(--nc, #2563eb) !important;
+  transform: translateX(2px) !important;
+}
+a.myst-toc-item:hover::before {
+  opacity: 1 !important;
+  transform: scale(1.4) !important;
+}
+
+/* Active (current page) */
+a.myst-toc-item.active {
+  background: var(--nb, rgba(37,99,235,0.1)) !important;
+  border-left-color: var(--nc, #2563eb) !important;
+  color: var(--nc, #2563eb) !important;
+  font-weight: 600 !important;
+}
+a.myst-toc-item.active::before {
+  opacity: 1 !important;
+}
+
+/* Dark mode: boost tint slightly */
+
+/* Sidebar right-edge accent line */
+.myst-primary-sidebar {
+  border-right: 1px solid rgba(37,99,235,0.1) !important;
+}
+
+/* --- 12. Footer link hover -------------------------------- */
+.myst-footer-link-group a:hover {
+  color: #2563eb !important;
+}
+
+/* ============================================================
+   TOP NAV — sidebar transforms to horizontal bar at xl+
+   ============================================================ */
+@media (min-width: 1280px) {
+  /* Full-width 46px horizontal strip at the same fixed position */
+  .myst-primary-sidebar {
+    height: 54px !important;
+    overflow: hidden !important;
+    background: rgba(249, 250, 251, 0.97) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(37, 99, 235, 0.1) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+    display: block !important;
+  }
+
+  /* Pointer div: full-width centred row */
+  .myst-primary-sidebar-pointer {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 54px !important;
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+    overflow: visible !important;
+    max-height: none !important;
+  }
+
+  /* TOC containers: horizontal */
+  .myst-primary-sidebar-toc,
+  .myst-primary-sidebar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 1 1 auto !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+    max-height: none !important;
+  }
+
+  /* TOC list: horizontal flex */
+  .myst-toc {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    gap: 0.1rem !important;
+    padding: 0 !important;
+    width: auto !important;
+  }
+
+  /* Each nav item: colourful rounded pill */
+  a.myst-toc-item {
+    display: inline-flex !important;
+    align-items: center !important;
+    white-space: nowrap !important;
+    padding: 0.4rem 0.95rem !important;
+    margin: 0 !important;
+    border-left: none !important;
+    border-bottom: none !important;
+    border-radius: 9999px !important;
+    font-size: 0.98rem !important;
+    font-weight: 600 !important;
+    color: #1e293b !important;
+    transform: none !important;
+    transition:
+      background 0.16s ease,
+      color 0.16s ease,
+      box-shadow 0.16s ease !important;
+  }
+
+  /* Always-visible accent dot — gives each tab its own colour */
+  a.myst-toc-item::before {
+    display: inline-block !important;
+    content: '' !important;
+    width: 7px !important;
+    height: 7px !important;
+    border-radius: 50% !important;
+    margin-right: 0.45rem !important;
+    background: var(--nc, #94a3b8) !important;
+    opacity: 0.9 !important;
+    transition: transform 0.16s ease !important;
+  }
+
+  a.myst-toc-item:hover {
+    transform: none !important;
+    background: var(--nb, rgba(37, 99, 235, 0.1)) !important;
+    color: var(--nc, #2563eb) !important;
+  }
+  a.myst-toc-item:hover::before {
+    transform: scale(1.35) !important;
+  }
+
+  /* Active tab: filled accent pill */
+  a.myst-toc-item.active {
+    background: var(--nc, #2563eb) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 8px -1px var(--nb, rgba(37, 99, 235, 0.4)) !important;
+  }
+  a.myst-toc-item.active::before {
+    background: #ffffff !important;
+    opacity: 0.95 !important;
+  }
+
+  /* Hide sidebar footer in top-nav mode */
+  .myst-primary-sidebar-footer {
+    display: none !important;
+  }
+
+  /* Push main content down to clear the 46px nav bar */
+  main.article-grid {
+    padding-top: 54px !important;
+  }
+}
+
+/* ============================================================
+   PROFILE HERO — full-width banner wrapping the photo+info grid
+   ============================================================ */
+.profile-hero {
+  grid-column: screen !important;
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.07) 0%, rgba(8, 145, 178, 0.03) 50%, transparent 75%),
+    linear-gradient(to bottom, #f0f4ff, #ffffff 70%);
+  border-bottom: 1px solid rgba(37, 99, 235, 0.09);
+  padding: 2.75rem max(1.5rem, 5vw) 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.profile-hero .myst-grid {
+  max-width: 1100px !important;
+  margin: 0 auto !important;
+}
+
+/* ============================================================
+   PROFILE HERO — Photo & Info Block
+   ============================================================ */
+
+/* Profile grid container: vertically center the two columns */
+.profile-hero .myst-grid:has(.profile-photo-col),
+.article .myst-grid:has(.profile-photo-col) {
+  align-items: center !important;
+  padding: 0.5rem 0 !important;
+}
+
+/* --- Photo column ----------------------------------------- */
+.profile-photo-col {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.profile-photo-col img,
+img[data-canonical-url="professional-dp.png"] {
+  display: block !important;
+  width: clamp(140px, 80%, 190px) !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  margin: 0 auto !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  border-radius: 50% !important;
+  border: 3px solid #2563eb !important;
+  box-shadow:
+    0 0 0 7px rgba(37, 99, 235, 0.10),
+    0 12px 40px rgba(0, 0, 0, 0.13) !important;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease !important;
+}
+
+.profile-photo-col img:hover,
+img[data-canonical-url="professional-dp.png"]:hover {
+  transform: scale(1.04) !important;
+  box-shadow:
+    0 0 0 10px rgba(37, 99, 235, 0.15),
+    0 18px 52px rgba(37, 99, 235, 0.20) !important;
+}
+
+/* --- Info column ------------------------------------------ */
+.profile-info-col {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding-left: 1rem !important;
+}
+
+/* Name — first bold element (now the person's name, not job title) */
+.profile-info-col > p:first-child > strong {
+  font-size: 2.1rem !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.15 !important;
+  display: block !important;
+  margin-bottom: 0.1rem !important;
+}
+
+/* Second paragraph: role line */
+.profile-info-col > p:nth-child(2) {
+  font-size: 1.05rem !important;
+  font-weight: 500 !important;
+  color: #374151 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.2rem !important;
+}
+
+/* All info paragraphs */
+.profile-info-col > p {
+  line-height: 1.75 !important;
+  margin-bottom: 0.35rem !important;
+}
+
+/* Research Interests line */
+.profile-info-col > p:nth-last-child(2) {
+  margin-top: 0.15rem !important;
+}
+.profile-info-col > p:nth-last-child(2) > strong {
+  color: #374151 !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+}
+
+/* Social links — last paragraph as pill-button row */
+.profile-info-col > p:last-child {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.4rem 0.45rem !important;
+  align-items: center !important;
+  margin-top: 0.75rem !important;
+}
+
+/* Reset the external-link icon wrapper on social pills */
+.profile-info-col > p:last-child a {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.3rem !important;
+  padding: 0.22rem 0.75rem !important;
+  background: rgba(37, 99, 235, 0.07) !important;
+  border: 1px solid rgba(37, 99, 235, 0.28) !important;
+  border-radius: 9999px !important;
+  font-size: 0.80rem !important;
+  font-weight: 500 !important;
+  color: #1d4ed8 !important;
+  text-decoration: none !important;
+  background-image: none !important;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease !important;
+}
+
+.profile-info-col > p:last-child a:hover {
+  background: rgba(37, 99, 235, 0.14) !important;
+  border-color: rgba(37, 99, 235, 0.55) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15) !important;
+  color: #1d4ed8 !important;
+}
+
+/* Hide the external-link SVG icon on social pills (keeps it clean) */
+.profile-info-col > p:last-child a svg.link-icon {
+  display: none !important;
+}
+
+/* ============================================================
+   RECENT NEWS — styled list
+   ============================================================ */
+.article h2#recent-news + ul > li {
+  padding: 0.4rem 0 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* ============================================================
+   SECTION DIVIDER — styled <hr>
+   ============================================================ */
+.article hr {
+  border: none !important;
+  height: 1px !important;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(37, 99, 235, 0.25),
+    transparent
+  ) !important;
+  margin: 1.5rem 0 !important;
+}
