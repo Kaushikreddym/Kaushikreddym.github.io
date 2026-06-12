@@ -51,12 +51,12 @@ Research Scientist · [Leibniz Centre for Agricultural Landscape Research (ZALF)
 
 ::::{grid} 1 2 3 3
 
-:::{card} climdata
+:::{card} ClimData
 :link: https://Kaushikreddym.github.io/climdata
 Making climate data processing easy for impact assessmentß
 :::
 
-:::{card} geeagri
+:::{card} CasCorrDiff
 :link: https://github.com/Kaushikreddym/CasCorrDiff
 Cascaded corrective diffusion model for climate downscaling
 :::

@@ -11,7 +11,7 @@ keywords:
 
 A running log of updates, presentations, publications, and milestones, organized by year. The current year is expanded by default; click any previous year to expand it.
 
-:::{dropdown} 2025
+<!-- :::{dropdown} 2025
 :open:
 
 - **2025-10-XX** – Oral presenter at *Sustainable Agriculture for Food Security and Global Health*, GBPUA&T, India
@@ -34,4 +34,4 @@ A running log of updates, presentations, publications, and milestones, organized
 - **2023-09-XX** – Oral presenter at *International Seminar on Recent Advancement in Geographical Studies*, Rampurhat College, India
 - **2023-02-XX** – Started Remote Internship at INRES, University of Bonn
 
-:::
+::: -->
