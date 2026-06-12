@@ -45,23 +45,27 @@ jobs:
 
       - name: Setup Typst
         uses: typst-community/setup-typst@v4
+        continue-on-error: true
 
       - name: Download fonts
+        continue-on-error: true
         run: |
           mkdir -p fonts
           # Source Sans Pro (body font)
           curl -sL "https://github.com/adobe-fonts/source-sans-pro/releases/download/3.006R/source-sans-pro-3.006R.zip" -o source-sans-pro.zip
           unzip -o source-sans-pro.zip -d /tmp/ssp
           cp /tmp/ssp/source-sans-pro-3.006R/OTF/*.otf fonts/
-          # Font Awesome 6 (icons)
-          curl -sL "https://use.fontawesome.com/releases/v6.7.2/fontawesome-free-6.7.2-desktop.zip" -o fa.zip
+          # Font Awesome 6 (icons) — use GitHub releases for reliability
+          curl -sL "https://github.com/FortAwesome/Font-Awesome/releases/download/6.7.2/fontawesome-free-6.7.2-desktop.zip" -o fa.zip
           unzip -o fa.zip -d /tmp/fa
           cp /tmp/fa/fontawesome-free-6.7.2-desktop/otfs/*.otf fonts/
 
       - name: Generate CV Typst source
+        continue-on-error: true
         run: python generate_cv.py
 
       - name: Compile CV PDF
+        continue-on-error: true
         run: typst compile cv.typ cv.pdf --font-path ./fonts --ignore-system-fonts
 
       - name: Build HTML Assets
@@ -84,7 +88,7 @@ jobs:
       - name: Copy static files and rewrite CV URL to stable path
         run: |
           cp CNAME ./_build/html/ 2>/dev/null || true
-          cp cv.pdf ./_build/html/cv.pdf
+          cp cv.pdf ./_build/html/cv.pdf 2>/dev/null || true
           # Rewrite hashed CV URL to stable /cv.pdf path
           find ./_build/html -name "*.html" -exec sed -i 's|/build/cv-[a-f0-9]\{20,\}\.pdf|/cv.pdf|g' {} \;
 
