@@ -45,8 +45,8 @@ project:
     - file: pages/awards.md
     - file: pages/services.md
     - file: pages/contact.md
+    - file: pages/blog.md
     # - file: pages/news.md
-    # - file: pages/blog.md
     # - pattern: blog/*.md
     #   hidden: true
 site:

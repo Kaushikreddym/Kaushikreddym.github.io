@@ -89,25 +89,40 @@ Cascaded corrective diffusion model for climate downscaling
 2 Awards & Honors
 :::
 
-<!-- :::{card} Blog ✍️
+:::{card} Writing & News ✍️
 :link: pages/blog
-Thoughts on research, software, and remote sensing
+Science communication, conference blogs, and milestones
 :::
-
-:::{card} News 📰
-:link: pages/news
-Latest updates and milestones
-::: -->
 
 ::::
 
 ---
 
-<!-- ## Recent News
+## Recent Writing & News
 
-- **2025-10-XX** — Oral presenter at *Sustainable Agriculture for Food Security and Global Health*, GBPUA&T, India
-- **2025-09-10** — Oral presenter at *Tropentag 2025*, University of Bonn, Germany
-- **2025-04-XX** — Poster presenter at *EGU General Assembly*, Vienna
-- **2025-01-XX** — Started as Research Scientist at ZALF, Müncheberg, Germany
+::::{grid} 1 1 3 3
 
-[See all news →](pages/news) -->
+:::{card} Cleaner Air, Tougher Harvests
+:link: https://blog.tropentag.de/2025/cleaner-air-tougher-harvests-the-hidden-trade-off-for-farmers/
+*Tropentag Blog* · Sep 2025
+
+How removing air pollution can reduce crop yields — the aerosol trade-off explained.
+:::
+
+:::{card} The Need to Curb Black Carbon Emissions
+:link: https://www.thehindu.com/sci-tech/energy-and-environment/the-need-to-curb-black-carbon-emissions-explained/article67995735.ece
+*The Hindu* · 2024
+
+Popular science explainer on black carbon as a potent short-lived climate forcer.
+:::
+
+:::{card} PhD in Climate Studies — IIT Bombay
+:link: https://x.com/ClimateIITB/status/1828734757829845140
+*IIT Bombay* · Aug 2024
+
+Awarded Doctor of Philosophy after research on aerosol–cloud interactions over India.
+:::
+
+::::
+
+[All writing & news →](pages/blog)

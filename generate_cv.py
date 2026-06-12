@@ -805,6 +805,18 @@ def gen_workshop_moderation(talks):
     return "= workshop moderation\n\n#resume-item[\n" + "\n".join(items) + "\n]"
 
 
+def gen_outreach(blog):
+    """parse outreach and media entries from blog.md."""
+    section = extract_section(blog, "## outreach & media")
+    if not section:
+        return ""
+    bullets = parse_bullets(section)
+    items = [f"  - {escape_typst(b)}" for b in bullets if b]
+    if not items:
+        return ""
+    return "= outreach & media\n\n#resume-item[\n" + "\n".join(items) + "\n]"
+
+
 def gen_services(services):
     """gather community peer evaluation service rows."""
     parts = []
@@ -853,6 +865,7 @@ def main():
     talks = read_file(pages, "talks.md")
     awards = read_file(pages, "awards.md")
     services = read_file(pages, "services.md")
+    blog = read_file(pages, "blog.md")
 
     sections = [
         gen_preamble(),
@@ -865,6 +878,7 @@ def main():
         gen_books(research),
         gen_publications(research),
         gen_grants(research),
+        gen_outreach(blog),
         gen_software(software),
         gen_teaching(teaching),
         gen_mentoring(teaching),
