@@ -560,6 +560,13 @@ a.myst-toc-item.active::before {
     display: none !important;
   }
 
+  /* Hide heading-anchor links from the horizontal bar — pages with many
+     headings (e.g. About) would otherwise flood the 54px bar and push
+     the page-level nav pills off screen */
+  a.myst-toc-item[href*="#"] {
+    display: none !important;
+  }
+
   /* Push main content down to clear the 46px nav bar */
   main.article-grid {
     padding-top: 54px !important;
