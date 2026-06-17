@@ -21,7 +21,7 @@ I am a climate and geospatial researcher passionate about working on real-world 
 **Indian Institute of Technology Bombay**  
 📅 Jul 2017 – Sep 2024
 
-**Research Areas:** Weather Forecasting • Cloud Microphysics
+**Research Areas:** `Climate Impact Assessment` • `Cloud Microphysics`
 
 **Thesis:**  
 *Aerosol-cloud-radiative interactions over India: Effects on cloud properties and rainfall formation processes*
@@ -32,7 +32,7 @@ I am a climate and geospatial researcher passionate about working on real-world 
 **Indian Institute of Science, Bengaluru**  
 📅 Jul 2013 – Aug 2015
 
-**Focus Areas:** Spectral Analysis • Climate Dynamics & Oscillations
+**Focus Areas:** `Spectral Analysis` • `Climate Dynamics & Oscillations`
 <!-- 
 **Thesis:**  
 *Northward Propagation of Intra-Seasonal Oscillations: A Study Using High-Resolution Geostationary Satellite Data* -->
@@ -43,7 +43,7 @@ I am a climate and geospatial researcher passionate about working on real-world 
 **National Institute of Technology Tiruchirappalli**  
 📅 Jun 2009 – May 2013
 
-**Focus Areas:** Computational Fluid Dynamics • Transport Phenomena
+**Focus Areas:** `Computational Fluid Dynamics` • `Transport Phenomena`
 
 <!-- **Thesis:**  
 *Styrene Production* -->
@@ -54,14 +54,14 @@ I am a climate and geospatial researcher passionate about working on real-world 
 
 ### Research Scientist
 **Leibniz Centre for Agricultural Landscape Research (ZALF)**  
-📅 Jan 2025 – Present
+📅 Feb 2025 – Present
 
 **Group:** Multi-Scale Modelling and Forecasting (MSM), Müncheberg, Germany
 
 **Key Contributions**
-- Developing machine learning models for multi-scale crop yield forecasting.
-- Integrating Earth observation data with climate indicators, soil data, and biodiversity metrics.
-- Contributing to FAIRagro, SynPAI, and AgML research projects.
+- Developing deep learning models for climate downscaling and agricultural impact assessment.
+- AIML model development for climate data imputation 
+- Contributing to FAIRagro and LLSYSTAIN research projects.
 
 **Skills**
 `GeoAI` • `Machine Learning` • `Deep Learning` • `Remote Sensing` • `Python` • `Earth Observation`
@@ -70,12 +70,11 @@ I am a climate and geospatial researcher passionate about working on real-world 
 
 ### Senior Associate
 **Center for Study of Science, Technology & Policy (CSTEP)**  
-📅 Apr 2023 – Jul 2023
+📅 Sep 2023 – Jan 2025
 
 **Key Contributions**
-- Conducted climate risk assessments for operations and upstream supply chains following TCFD recommendations.
-- Evaluated sustainability interventions involving electric mobility and logistics optimization.
-- Assessed distribution-center strategies to improve supply-chain resilience and reduce emissions.
+- Air quality modelling to investigate source influences to air quality over India using WRF-CAMx.
+- Black carbon mitigation policy and engagement with stakeholders.
 
 **Skills**
 `Air Quality Modelling` • `Short Term Climate Forcers` • `Policy Analysis`
@@ -88,7 +87,6 @@ I am a climate and geospatial researcher passionate about working on real-world 
 
 **Key Contributions**
 - Conducted climate risk assessments for operations and upstream supply chains following TCFD recommendations.
-- Evaluated sustainability interventions involving electric mobility and logistics optimization.
 - Assessed distribution-center strategies to improve supply-chain resilience and reduce emissions.
 
 **Skills**
@@ -100,10 +98,7 @@ I am a climate and geospatial researcher passionate about working on real-world 
 **Indian Institute of Technology Bombay**  
 📅 Jul 2017 – Mar 2024
 
-**Supervisors:** Prof. Chandra Venkataraman · Dr Vikas Singh · Dr Amit Kesarkar (NARL, ISRO)
-
 **Research Areas**
-- Aerosol impact on cloud systems and rainfall formation processes
 - Regional and global climate modelling (WRF-Chem, ECHAM-HAM)
 - Aerosol–cloud interactions and precipitation processes
 
@@ -113,7 +108,7 @@ I am a climate and geospatial researcher passionate about working on real-world 
 - Collaborated with researchers at the National Atmospheric Research Laboratory (ISRO).
 
 **Skills**
-`WRF-Chem` • `ECHAM-HAM` • `Python` • `Numerical Weather Prediction` • `Time Series Analysis` • `Shell Scripting`
+`Air-Quality Modelling` • `Python` • `Numerical Weather Prediction` • `Time Series Analysis` • `Shell Scripting`
 
 ---
 
@@ -134,8 +129,6 @@ I am a climate and geospatial researcher passionate about working on real-world 
 **Indian Institute of Technology Bombay**  
 📅 2016 – 2017
 
-**Supervisor:** Prof. Chandra Venkataraman
-
 **Research Focus**
 - Disentangling the role of ocean–atmosphere interactions and aerosol fast adjustments on the atmosphere
 - Climate variability and modelling
@@ -148,8 +141,6 @@ I am a climate and geospatial researcher passionate about working on real-world 
 ### Junior Research Fellow
 **Indian Institute of Science Bengaluru**  
 📅 2015 – 2016
-
-**Supervisor:** Prof. Jai Sukhatme (Centre for Atmospheric and Oceanic Sciences)
 
 **Research Focus**
 - Space–time scaling properties of deep convective systems leading to heavy floods
