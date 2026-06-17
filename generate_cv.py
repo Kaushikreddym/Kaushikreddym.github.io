@@ -296,7 +296,7 @@ def gen_preamble():
     lastname: "Muduchuru",
     email: "kaushik.reddy.m@gmail.com",
     phone: "(+49) 15510 527370",
-    github: "Kaushikreddym",
+    github: "Github",
     address: "ernst-thälmann-straße 102, 15374 müncheberg, germany",
     positions: (
       "research scientist",
