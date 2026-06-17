@@ -292,19 +292,19 @@ def gen_preamble():
 
 #show: resume.with(
   author: (
-    firstname: "kaushik",
-    lastname: "muduchuru",
+    firstname: "Kaushik",
+    lastname: "Muduchuru",
     email: "kaushik.reddy.m@gmail.com",
     phone: "(+49) 15510 527370",
-    github: "kaushikreddym",
+    github: "Kaushikreddym",
     address: "ernst-thälmann-straße 102, 15374 müncheberg, germany",
     positions: (
       "research scientist",
     ),
     custom: (
-      (text: "kaushik muduchuru", icon: "house", link: "https://www.zalf.de/en/ueber_uns/mitarbeiter/pages/default_ag.aspx?idxs=x90x"),
-      (text: "kaushik muduchuru", icon: "linkedin", link: "https://www.linkedin.com/in/kaushik-muduchuru-ab911077/"),
-      (text: "kaushik muduchuru", icon: "google-scholar", link: "https://scholar.google.com/citations?user=MrB8A3gAAAAJ&hl=en"),
+      (text: "HomePage", icon: "house", link: "https://www.zalf.de/en/ueber_uns/mitarbeiter/pages/default_ag.aspx?idxs=x90x"),
+      (text: "Linkedin", icon: "linkedin", link: "https://www.linkedin.com/in/kaushik-muduchuru-ab911077/"),
+      (text: "Scholar", icon: "google-scholar", link: "https://scholar.google.com/citations?user=MrB8A3gAAAAJ&hl=en"),
       (text: "0000-0002-8967-7872", icon: "orcid", link: "https://orcid.org/0000-0002-8967-7872"),
     ),
   ),
