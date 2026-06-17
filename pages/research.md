@@ -11,24 +11,24 @@ keywords:
 
 # Research
 
-My work advances geospatial data science and machine learning for multi-scale crop yield forecasting, integrating Earth observation data, climate indicators, soil data, and biodiversity metrics to support sustainable agriculture.
+ My work advances climate data science and machine learning for multi-scale agricultural impact assessments, integrating satellite observations, climate indicators, soil properties, and biodiversity metrics to support sustainable agriculture and climate-resilient food systems.
 
 ## Research Areas
 
-- GeoAI
+- Climate Change
 - Machine Learning & Deep Learning
-- Computer Vision
 - Earth Observation
-- Agriculture
-- Crop Yield Forecasting
+- Agriculture Impacts Modelling
+- Air Quality Modelling 
 
 ---
 
 ## Funded Projects
 
-1. **FAIRagro** — Leibniz-Lab Systemic Sustainability. Biodiversity, Climate, Agriculture and Food within Planetary Boundaries. Funded by Leibniz Association. Jan 2025 – Present.
-2. **SynPAI** — Synergising Process-Based and Machine Learning Models for Accurate and Explainable Crop Yield Prediction along with Environmental Impact Assessment. Funded by BBSRC. Feb 2024 – Present.
-3. **AgML** — Machine Learning for Agricultural Modelling. Jan 2024 – Present.
+1. **FAIRagro** — FAIR (Findable, Accessible, Interoperable, Reusable) research data management system for the agrosystems research community. Funded by Deutsche Forschungsgemeinschaft. Feb 2025 – Present.
+2. **Tackling Black Carbon** —  Dual benefits for people and 
+the planet by more effectively tackling black carbon. Funded by Clean Air Fund, London UK. Sep 2023 – Jan 2025.
+3. **NCAP-COALESCE** — COALESCE (Carbonaceous Aerosol Emissions, Source Apportionment and Climate Impacts) project funded by MoEFCC, Govt of India. Jul 2017 - Sep 2023 
 
 ---
 
