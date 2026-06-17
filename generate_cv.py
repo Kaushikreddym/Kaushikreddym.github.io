@@ -296,19 +296,25 @@ def gen_preamble():
     lastname: "Muduchuru",
     email: "kaushik.reddy.m@gmail.com",
     phone: "(+49) 15510 527370",
-    github: "Github",
+    github: "GitHub",
     address: "ernst-thälmann-straße 102, 15374 müncheberg, germany",
     positions: (
       "research scientist",
     ),
     custom: (
       (text: "HomePage", icon: "house", link: "https://www.zalf.de/en/ueber_uns/mitarbeiter/pages/default_ag.aspx?idxs=x90x"),
-      (text: "Linkedin", icon: "linkedin", link: "https://www.linkedin.com/in/kaushik-muduchuru-ab911077/"),
+      (text: "LinkedIn", icon: "linkedin", link: "https://www.linkedin.com/in/kaushik-muduchuru-ab911077/"),
       (text: "Scholar", icon: "google-scholar", link: "https://scholar.google.com/citations?user=MrB8A3gAAAAJ&hl=en"),
       (text: "0000-0002-8967-7872", icon: "orcid", link: "https://orcid.org/0000-0002-8967-7872"),
     ),
   ),
-  profile-picture: image("professional-dp.png"),
+  // The template clips this into a fixed 4cm circle. The source photo is
+  // portrait, so we render it slightly wider than the frame and nudge it left
+  // (dx) so the subject is no longer snipped. Increase the negative dx to push
+  // it further left; keep image width >= 4cm + |dx| to avoid a gap on the right.
+  profile-picture: box(width: 4cm, height: 4cm, clip: true)[
+    #place(left + horizon, dx: -3mm, image("professional-dp.png", width: 4.3cm))
+  ],
   date: datetime.today().display(),
   language: "en",
   paper-size: "a4",

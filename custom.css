@@ -574,6 +574,28 @@ a.myst-toc-item.active::before {
 }
 
 /* ============================================================
+   COVER BANNER — full-bleed hero image across the top
+   ============================================================ */
+.cover-banner {
+  grid-column: screen !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.cover-banner img,
+.cover-banner-img {
+  display: block !important;
+  width: 100% !important;
+  height: clamp(180px, 32vw, 360px) !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* ============================================================
    PROFILE HERO — full-width banner wrapping the photo+info grid
    ============================================================ */
 .profile-hero {
