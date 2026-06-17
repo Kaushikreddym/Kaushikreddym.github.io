@@ -88,9 +88,15 @@ jobs:
       - name: Copy static files and rewrite CV URL to stable path
         run: |
           cp CNAME ./_build/html/ 2>/dev/null || true
-          cp cv.pdf ./_build/html/cv.pdf 2>/dev/null || true
-          # Rewrite hashed CV URL to stable /cv.pdf path
-          find ./_build/html -name "*.html" -exec sed -i 's|/build/cv-[a-f0-9]\{20,\}\.pdf|/cv.pdf|g' {} \;
+          # Only publish and rewrite the CV link if the PDF actually compiled,
+          # otherwise we'd ship a footer link to a missing /cv.pdf.
+          if [ -f cv.pdf ]; then
+            cp cv.pdf ./_build/html/cv.pdf
+            # Rewrite hashed CV URL to stable /cv.pdf path
+            find ./_build/html -name "*.html" -exec sed -i 's|/build/cv-[a-f0-9]\{20,\}\.pdf|/cv.pdf|g' {} \;
+          else
+            echo "::warning::cv.pdf not found — skipping CV publish; footer CV link may be broken."
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
