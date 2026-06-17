@@ -43,9 +43,9 @@ project:
     - file: pages/teaching.md
     - file: pages/talks.md
     - file: pages/awards.md
-    # - file: pages/services.md
     - file: pages/contact.md
     - file: pages/blog.md
+    # - file: pages/services.md
     # - file: pages/news.md
     # - pattern: blog/*.md
     #   hidden: true
