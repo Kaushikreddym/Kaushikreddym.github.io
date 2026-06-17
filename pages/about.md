@@ -64,7 +64,7 @@ I am a climate and geospatial researcher passionate about working on real-world 
 - Contributing to FAIRagro and LLSYSTAIN research projects.
 
 **Skills**
-`GeoAI` • `Machine Learning` • `Deep Learning` • `Remote Sensing` • `Python` • `Earth Observation`
+`Machine Learning` • `Deep Learning` • `Climate Downscaling` • `FAIR ETL Pipelines`
 
 ---
 

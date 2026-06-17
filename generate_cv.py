@@ -308,13 +308,10 @@ def gen_preamble():
       (text: "0000-0002-8967-7872", icon: "orcid", link: "https://orcid.org/0000-0002-8967-7872"),
     ),
   ),
-  // The template clips this into a fixed 4cm circle. The source photo is
-  // portrait, so we render it slightly wider than the frame and nudge it left
-  // (dx) so the subject is no longer snipped. Increase the negative dx to push
-  // it further left; keep image width >= 4cm + |dx| to avoid a gap on the right.
-  profile-picture: box(width: 4cm, height: 4cm, clip: true)[
-    #place(left + horizon, dx: -3mm, dy: 2mm , image("professional-dp.png", width: 4.3cm))
-  ],
+  // The template clips this into a circle. We feed it a pre-cropped square
+  // (professional-dp-cv.png, generated from professional-dp.png) that already
+  // frames the head with headroom, so the circular crop never cuts the head.
+  profile-picture: image("professional-dp-cv.png"),
   date: datetime.today().display(),
   language: "en",
   paper-size: "a4",

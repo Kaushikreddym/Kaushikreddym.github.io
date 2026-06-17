@@ -51,8 +51,8 @@ project:
     #   hidden: true
 site:
   options:
-    logo: logo.png
-    logo_dark: logo.png
+    logo: home.svg
+    logo_dark: home.svg
     favicon: fav.ico
     style: custom.css
     # analytics_google: G-XXXXXXXXXX

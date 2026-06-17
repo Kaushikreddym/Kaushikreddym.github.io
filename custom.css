@@ -284,7 +284,7 @@ body::before {
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  min-height: 120px !important;
+  min-height: 92px !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
@@ -479,9 +479,16 @@ a.myst-toc-item.active::before {
    TOP NAV — sidebar transforms to horizontal bar at xl+
    ============================================================ */
 @media (min-width: 1280px) {
-  /* Full-width 46px horizontal strip at the same fixed position */
+  /* Full-width 54px horizontal strip pinned directly below the 92px cover
+     nav, so the tabs stay visible (the cover bar no longer covers them). */
   .myst-primary-sidebar {
+    position: fixed !important;
+    top: 92px !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
     height: 54px !important;
+    z-index: 25 !important;
     overflow: hidden !important;
     background: rgba(249, 250, 251, 0.97) !important;
     backdrop-filter: blur(12px) !important;
@@ -598,7 +605,8 @@ a.myst-toc-item.active::before {
     display: none !important;
   }
 
-  /* Push main content down to clear the 46px nav bar */
+  /* The 92px cover nav is sticky (reserves its own space in flow); only the
+     fixed 54px tabs strip overlays the content, so clear just that. */
   main.article-grid {
     padding-top: 54px !important;
   }
