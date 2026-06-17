@@ -16,8 +16,13 @@ html.dark body {
   color: #0f172a !important;
 }
 html.dark .myst-top-nav {
-  background: rgba(255, 255, 255, 0.85) !important;
-  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06) !important;
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.45)),
+    url("/cover.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.18) !important;
 }
 
 /* ------------------------------------------------------------
@@ -270,10 +275,36 @@ body::before {
 
 /* --- 5. Navigation Bar ------------------------------------- */
 .myst-top-nav {
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
-  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06) !important;
+  /* Cover photo fills the sticky top bar so it stays visible on scroll
+     and on every page. Served from a stable /cover.png (see deploy.yml).
+     The dark gradient overlay keeps the logo/controls legible. */
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.45)),
+    url("/cover.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  min-height: 120px !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.18) !important;
+}
+
+/* Keep top-nav contents readable over the cover photo */
+.myst-top-nav,
+.myst-top-nav a,
+.myst-top-nav button,
+.myst-top-nav svg,
+.myst-top-nav .myst-project-title {
+  color: #ffffff !important;
+}
+.myst-top-nav button,
+.myst-top-nav input {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+.myst-top-nav input::placeholder {
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 
 /* --- 6. Card Glassmorphism --------------------------------- */
@@ -571,28 +602,6 @@ a.myst-toc-item.active::before {
   main.article-grid {
     padding-top: 54px !important;
   }
-}
-
-/* ============================================================
-   COVER BANNER — full-bleed hero image across the top
-   ============================================================ */
-.cover-banner {
-  grid-column: screen !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  line-height: 0;
-  overflow: hidden;
-}
-
-.cover-banner img,
-.cover-banner-img {
-  display: block !important;
-  width: 100% !important;
-  height: clamp(180px, 32vw, 360px) !important;
-  object-fit: cover !important;
-  object-position: center !important;
-  margin: 0 !important;
-  border-radius: 0 !important;
 }
 
 /* ============================================================

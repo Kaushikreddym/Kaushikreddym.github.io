@@ -313,7 +313,7 @@ def gen_preamble():
   // (dx) so the subject is no longer snipped. Increase the negative dx to push
   // it further left; keep image width >= 4cm + |dx| to avoid a gap on the right.
   profile-picture: box(width: 4cm, height: 4cm, clip: true)[
-    #place(left + horizon, dx: -3mm, image("professional-dp.png", width: 4.3cm))
+    #place(left + horizon, dx: -3mm, dy: 2mm , image("professional-dp.png", width: 4.3cm))
   ],
   date: datetime.today().display(),
   language: "en",

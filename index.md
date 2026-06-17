@@ -6,16 +6,6 @@ description: Kaushik Muduchuru, Research Scientist at the Leibniz Centre for Agr
 ---
 
 :::::{div}
-:class: cover-banner
-
-```{image} cover.png
-:alt: Kaushik Muduchuru — cover
-:class: cover-banner-img
-```
-
-:::::
-
-:::::{div}
 :class: profile-hero
 
 ::::{grid} 1 1 2 2
