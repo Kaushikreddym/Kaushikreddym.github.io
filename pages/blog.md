@@ -60,7 +60,7 @@ An explainer on black carbon — one of the most potent short-lived climate forc
 
 **Milestone** · *Indian Institute of Technology Bombay* · Aug 2024
 
-Awarded Doctor of Philosophy in Climate Studies after seven years of doctoral research on aerosol–cloud–radiation interactions over India, including cloud microphysics, regional climate modelling with WRF-Chem and ECHAM-HAM, and aerosol–precipitation feedbacks.
+Awarded Doctor of Philosophy in Climate Studies after six years of doctoral research on aerosol–cloud–radiation interactions over India, including cloud microphysics, regional climate modelling with WRF-Chem and ECHAM-HAM, and aerosol–precipitation feedbacks.
 
 [See announcement →](https://x.com/ClimateIITB/status/1828734757829845140)
 :::
