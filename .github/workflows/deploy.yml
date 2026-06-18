@@ -44,7 +44,7 @@ jobs:
         run: npm install -g mystmd
 
       - name: Setup Typst
-        uses: typst-community/setup-typst@v4
+        uses: typst-community/setup-typst@v5
         continue-on-error: true
 
       - name: Download fonts
